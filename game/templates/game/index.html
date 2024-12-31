@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Game</title>
+</head>
+<body>
+    <h1>Cards Against Morfina</h1>
+    <button onclick="fetchCards()">Draw Cards</button>
+    <div id="output"></div>
+    <script>
+        async function fetchCards() {
+            const response = await fetch('/draw_cards/');
+            const data = await response.json();
+            document.getElementById('output').innerHTML =
+                `<h2>Black Card</h2><p>${data.black_card}</p>
+                 <h2>White Cards</h2><ul>${data.white_cards.map(card => `<li>${card}</li>`).join('')}</ul>`;
+        }
+    </script>
+</body>
+</html>
