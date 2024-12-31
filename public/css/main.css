@@ -1,0 +1,122 @@
+.main-container {
+    height: 100%;
+    width: 100%;
+    min-width: 600px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border-radius: 4px;
+    transition-duration: 100ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 20px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn > div > label {
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(.85);
+}
+
+.btn:active {
+    filter: brightness(.7);
+}
+
+.btn--secondary {
+    font-weight: 600;
+}
+
+.btn--secondary:hover {
+    filter: brightness(1);
+}
+
+.btn--secondary:active {
+    filter: brightness(1);
+}
+
+.btn__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    white-space: nowrap;
+}
+
+.btn__content--large {
+    column-gap: 14px;
+}
+
+.btn__primary {
+    background-color: #D0376C70;
+    color: #261C6B;
+}
+
+.btn__secondary {
+    background-color: #E3C2E5;
+    color: #431E70;
+}
+
+.btn__info {
+    background-color: #6093DB50;
+    color: #261C6B;
+}
+
+.navbar__container {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #431E70;
+    border-radius :4px;
+    height: 55px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 10px 20px;
+}
+
+.nav-bar__content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-button__text {
+    text-align: center;
+    color: #FFFADE;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+    .nav-button__text {
+        display: block;
+    }
+}
+
+.nav-button__logo-text-container {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.nav-button__logo {
+    width: 55px;
+}

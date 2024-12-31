@@ -1,0 +1,17 @@
+{:source-paths ["src"
+                "src/cljs"]
+ :dependencies [[binaryage/devtools "1.0.6"]
+                [cider/cider-nrepl "0.28.6"]
+                [nrepl "1.0.0"]
+                [org.slf4j/slf4j-nop "1.7.36"]
+                [re-frame "1.4.0"]
+                [reagent "1.1.1"]
+                [refactor-nrepl "3.5.5"]]
+
+ :builds       {:app {:target     :browser
+                      :output-dir "public/js"
+                      :asset-path "/js"
+                      :modules    {:app {:entries [morfina.core]}}
+                      :devtools   {:after-load morfina.core/mount-root}}}
+
+ :dev-http     {3000 {:root "public"}}}
